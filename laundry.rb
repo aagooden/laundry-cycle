@@ -10,7 +10,7 @@ end
 
 def wearing_clothes(smell)
   
-  sample(:drum_bass_hard, rate:smell)
+  sample(:drum_cymbal_hard, rate:smell)
   print "sample was our wear from function"
   sleep(2)
 end
