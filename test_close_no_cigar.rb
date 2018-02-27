@@ -50,23 +50,25 @@ class Addition_test < Minitest::Test
 		assert_equal(2, number.length)
 	end
 
-	def test_winner_three_digits_3_matches
+	def test_winner_three_digits_match_returned_array
 		winner = "1234"
 		num_array = ["1234", "1224", "1235", "5234"]
 		number = array_off_by_ones(winner, num_array)
 		assert_equal(3, number.length)
 	end
 
+	def test_winner_three_digits_3_matches
+		winner = "1234"
+		num_array = ["1234", "1224", "1235", "5234"]
+		number = array_off_by_ones(winner, num_array)
+		assert_equal(["1224", "1235", "5234"], number)
+	end
 
-
-
-
-
-	# def test_one_matches_one
-	# 	x = "1"
-	# 	y = "1"
-	# 	number_test = off_by_one(num1, num2)
-	# 	assert_equal(true, number_test)
-	# end
+	def test_winner_three_digits_5_matches
+		winner = "1234"
+		num_array = ["1234", "1224", "1235", "5234", "1534", "1934", "0000"]
+		number = array_off_by_ones(winner, num_array)
+		assert_equal(["1224", "1235", "5234", "1534", "1934"], number)
+	end
 
 end
