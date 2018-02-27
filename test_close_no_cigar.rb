@@ -71,4 +71,32 @@ class Addition_test < Minitest::Test
 		assert_equal(["1224", "1235", "5234", "1534", "1934"], number)
 	end
 
+	def test_winner_three_digits_5_matches
+		winner = "9876"
+		num_array = ["9876", "1224", "1235", "5234", "1534", "1934", "0000"]
+		number = full_match(winner, num_array)
+		assert_equal(["9876"], number)
+	end
+
+	def test_number_of_winners_in_array
+		winner = "9876"
+		num_array = ["9876", "8876", "9876", "5234", "9876", "9874", "9876"]
+		number = full_match(winner, num_array)
+		assert_equal(4, number.length)
+	end
+
+	def test_winner_full_match_6_digits
+		winner = "987654"
+		num_array = ["987654", "1224", "1235", "523478", "1534", "1934", "000012"]
+		number = full_match(winner, num_array)
+		assert_equal(["987654"], number)
+	end
+
+	def test_winner_multiple_digits_one_off
+		winner = "123456"
+		num_array = ["123456", "122456", "123457", "5234", "1534", "1934", "0000", "12345", "1"]
+		number = array_off_by_ones(winner, num_array)
+		assert_equal(["122456", "123457"], number)
+	end
+
 end
