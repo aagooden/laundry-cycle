@@ -36,6 +36,32 @@ class Addition_test < Minitest::Test
 		assert_equal(3, number)
 	end
 
+	def test_three_matches_miss_second_position
+		num1 = "1134"
+		num2 = "1234"
+		number = off_by_one(num1, num2)
+		assert_equal(3, number)
+	end
+
+	def test_winner_three_digits_2_matches
+		winner = "1234"
+		num_array = ["1234", "1224", "1235"]
+		number = array_off_by_ones(winner, num_array)
+		assert_equal(2, number.length)
+	end
+
+	def test_winner_three_digits_3_matches
+		winner = "1234"
+		num_array = ["1234", "1224", "1235", "5234"]
+		number = array_off_by_ones(winner, num_array)
+		assert_equal(3, number.length)
+	end
+
+
+
+
+
+
 	# def test_one_matches_one
 	# 	x = "1"
 	# 	y = "1"
