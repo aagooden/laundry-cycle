@@ -7,14 +7,11 @@ class Addition_test < Minitest::Test
 		assert_equal(true, true)
 	end
 
-
-	# def test_integer
-	# 	num1 = "1"
-	# 	num2 = "1"
-	# 	number = off_by_one(num1, num2)
-	# 	assert_equal(1, number)
-	# end
-
+	def test_for_returned_array
+		pairs = return_pairs()
+		assert_equal(Array, pairs.class)
+	end
+end
 	# def test_four_numbers
 	# 	num1 = "1234"
 	# 	num2 = "1234"
