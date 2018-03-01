@@ -13,7 +13,6 @@ def return_pairs(people)
 	end
 
 	if people.length % 2 != 0
-		#puts pairs_array[pairs_array.length - 1]
 		pairs_array[pairs_array.length - 1].push(people.last)
 	end
 
