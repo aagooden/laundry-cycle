@@ -31,4 +31,19 @@ class Addition_test < Minitest::Test
 		assert_equal(condition, true)
 	end
 
+	def test_for_group_of_three_when_odd_number_of_names_sent
+		pairs = return_pairs(["dasher", "dancer", "cupid", "donder", "blitzen"])
+		check_group = pairs.last
+		assert_equal(3, check_group.length)
+	end
+
+	def test_for_group_of_three_when_big_odd_number_of_names_sent
+		pairs = return_pairs(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"])
+		check_group = pairs.last
+		assert_equal(3, check_group.length)
+	end
+
+	
+
+
 end
