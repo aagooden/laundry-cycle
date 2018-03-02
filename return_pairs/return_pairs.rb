@@ -16,6 +16,5 @@ def return_pairs(people)
 		pairs_array[pairs_array.length - 1].push(people.last)
 	end
 
-	print pairs_array
 	return pairs_array
 end

@@ -43,7 +43,11 @@ class Addition_test < Minitest::Test
 		assert_equal(3, check_group.length)
 	end
 
-	
+	def test_for_group_of_three_when_three_names_sent
+		pairs = return_pairs(["huey", "dooey", "looey"])
+		check_group = pairs.last
+		assert_equal(3, check_group.length)
+	end	
 
 
 end
